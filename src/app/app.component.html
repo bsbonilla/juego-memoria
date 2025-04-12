@@ -1,0 +1,11 @@
+<h1> <P>IS08N1</P> Juego de Memoria</h1>
+<div class="grid">
+  <div
+    class="card"
+    *ngFor="let card of cards; index as i"
+    (click)="flipCard(i)">
+    <span *ngIf="isFlipped(i)">{{ card }}</span>
+    <span *ngIf="!isFlipped(i)">❓</span>
+  </div>
+</div>
+<button (click)="resetGame()">Reiniciar</button>
